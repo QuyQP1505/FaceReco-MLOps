@@ -1,0 +1,8 @@
+face_images:
+  type: kedro.extras.datasets.img.Imageloader
+  filepath: data/01_raw
+  image_size: [120, 120]
+
+svm_model:
+  type: PickleDataSet
+  filepath: ${data.svm_model_dir}/svm_model.pkl

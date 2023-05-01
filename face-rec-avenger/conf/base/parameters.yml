@@ -1,0 +1,10 @@
+features:
+  lbp_radius: 3
+  lbp_points: 24
+  hog_orientations: 8
+  hog_pixels_per_cell: [16, 16]
+  hog_cells_per_block: [3, 3]
+
+svm_model:
+  c: 0.01
+  kernel: linear
