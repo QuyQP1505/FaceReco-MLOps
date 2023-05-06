@@ -3,10 +3,13 @@ import numpy as np
 from skimage.feature import local_binary_pattern, hog
 
 
-def extract_features(img, resize_shape=(120, 120)):
+def extract_features(pil_img, resize_shape):
     
+    # Convert from PIL to Numpy arrays
+    img = np.array(pil_img)
+
     # Convert the image to grayscale.
-    img = cv2.resize(img, resize_shape)
+    img = cv2.resize(img, (120, 120))
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     
     # Compute the LBP feature vector for the grayscale image.
