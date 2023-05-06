@@ -1,3 +1,3 @@
 # MLOps
 
-![Architecture](images/architect.png)
+![Architecture](images/architecture.png)
