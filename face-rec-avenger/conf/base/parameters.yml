@@ -4,6 +4,7 @@ features:
   hog_orientations: 8
   hog_pixels_per_cell: [16, 16]
   hog_cells_per_block: [3, 3]
+  resize_size: [120, 120]
 
 svm_model:
   c: 0.01

@@ -1,8 +1,15 @@
-face_images:
-  type: kedro.extras.datasets.img.Imageloader
+train_images:
+  type: kedro_datasets.pillow.ImageDataSet
   filepath: data/01_raw
-  image_size: [120, 120]
+
+# eval_images:
+#   type: kedro_datasets.pillow.ImageDataSet
+#   filepath: data/02_intermediate
+
+test_images:
+  type: kedro_datasets.pillow.ImageDataSet
+  filepath: data/02_intermediate/mark-ruffalo.jpg
 
 svm_model:
-  type: PickleDataSet
-  filepath: ${data.svm_model_dir}/svm_model.pkl
+  type: pickle.PickleDataSet
+  filepath: data/06_models/svm_model.pkl
